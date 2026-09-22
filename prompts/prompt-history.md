@@ -51,14 +51,4 @@ Decision locked: product = IncidentAI; stack and features as implemented.
 - Local smoke test (`wrangler dev --local`): create incident → workflow → diagnosed; chat memory fallback when Workers AI remote binding unavailable.
 - Deploy dry-run succeeded (Worker + assets bundle).
 
-### 6. Run the app
-
-> run the app
-
-Started / confirmed local server at `http://127.0.0.1:8787`.
-
-### 7. Push to GitHub
-
-> https://github.com/RishavGhosh7/Incident-AI push to this repo
-
 Append further user prompts below as the project evolves.
