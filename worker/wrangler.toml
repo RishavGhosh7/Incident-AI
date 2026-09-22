@@ -1,0 +1,36 @@
+name = "incident-ai"
+main = "src/index.ts"
+compatibility_date = "2025-09-22"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "../frontend/dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "incident-ai"
+database_id = "00000000-0000-0000-0000-000000000001"
+migrations_dir = "migrations"
+
+[durable_objects]
+bindings = [
+  { name = "INCIDENT", class_name = "IncidentDO" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["IncidentDO"]
+
+[[workflows]]
+name = "incident-analysis"
+binding = "INCIDENT_WORKFLOW"
+class_name = "IncidentAnalysisWorkflow"
+
+[observability]
+enabled = true

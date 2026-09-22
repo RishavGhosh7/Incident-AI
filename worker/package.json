@@ -1,0 +1,20 @@
+{
+  "name": "worker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "db:migrate:local": "wrangler d1 migrations apply incident-ai --local",
+    "test": "vitest run",
+    "build": "echo 'Worker builds via wrangler'"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250917.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.37.0"
+  }
+}

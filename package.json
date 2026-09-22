@@ -1,0 +1,20 @@
+{
+  "name": "incident-ai",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "worker"
+  ],
+  "scripts": {
+    "dev": "npm run build:frontend && npm run dev -w worker",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:worker": "npm run dev -w worker",
+    "build": "npm run build -w frontend && npm run build -w worker",
+    "build:frontend": "npm run build -w frontend",
+    "test": "npm run test -w worker",
+    "deploy": "npm run build:frontend && npm run deploy -w worker",
+    "db:migrate:local": "npm run db:migrate:local -w worker",
+    "types": "npm run types -w worker"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+dist
+.wrangler
+.wrangler-bundle
+.dev.vars
+.DS_Store
+*.log
+frontend/dist
+.vite
